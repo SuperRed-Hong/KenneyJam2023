@@ -26,7 +26,6 @@ public class CharacterAttack : MonoBehaviour
         if (fire != 0)
         {
             //anim.SetBool(status.chParam.Attact, false);
-            print("123");
         }
         else
         {
