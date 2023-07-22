@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 /// <summary>
-/// 
+/// 玩家攻击类，负责玩家的攻击。不过暂时没用，但先提出来，以方便扩展
+/// 玩家的武器挂，由武器碰撞器检测和触发。
 /// </summary>
 public class CharacterAttack : MonoBehaviour
 {

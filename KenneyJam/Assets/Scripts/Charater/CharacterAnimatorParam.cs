@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 /// <summary>
+/// 动画参数类，负责存储动画的参数名字，以方便代码直接变量调用和修改。
 /// 
 /// </summary>
 

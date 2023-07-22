@@ -639,11 +639,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1149182562}
-  - component: {fileID: 1149182561}
-  - component: {fileID: 1149182563}
-  - component: {fileID: 1149182564}
   - component: {fileID: 1149182566}
   - component: {fileID: 1149182565}
+  - component: {fileID: 1149182569}
+  - component: {fileID: 1149182568}
+  - component: {fileID: 1149182567}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -651,20 +651,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1149182561
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1149182560}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73a58569da6dcb14fbfdb0e02e79a357, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _SpeedMove: 5
-  inputDirection: {x: 0, y: 0}
 --- !u!4 &1149182562
 Transform:
   m_ObjectHideFlags: 0
@@ -681,41 +667,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1149182563
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1149182560}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62ff6cce28d725c47a0734eda7ef6647, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1149182564
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1149182560}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac70d097d452d9949aba62c85cd424fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  chParam:
-    Excavate: Excavate
-    Run: Run
-    Attact: Attact
-  currentHP: 100
-  maxHP: 100
-  money: 0
-  currentWater: 20
-  maxWater: 20
-  ATK: 1
-  ATKInterval: 0.5
 --- !u!50 &1149182565
 Rigidbody2D:
   serializedVersion: 4
@@ -763,6 +714,55 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.9874198, y: 2.988608}
   m_EdgeRadius: 0
+--- !u!114 &1149182567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1149182560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac70d097d452d9949aba62c85cd424fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chParam:
+    Excavate: Excavate
+    Run: Run
+    Attact: Attact
+  currentHP: 100
+  maxHP: 100
+  money: 0
+  currentWater: 20
+  maxWater: 20
+  ATK: 1
+  ATKInterval: 0.5
+--- !u!114 &1149182568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1149182560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62ff6cce28d725c47a0734eda7ef6647, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1149182569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1149182560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73a58569da6dcb14fbfdb0e02e79a357, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _SpeedMove: 2
+  inputDirection: {x: 0, y: 0}
 --- !u!1 &1268112229
 GameObject:
   m_ObjectHideFlags: 0
