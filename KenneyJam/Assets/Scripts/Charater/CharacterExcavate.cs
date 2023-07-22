@@ -15,14 +15,19 @@ public class CharacterExcavate : MonoBehaviour
     }
     private void Excavate()
     {
-        if (status.currentWater >= 0)
+        if (status.currentWater > 0)
         {
             status.currentWater--;
             anim.SetBool(status.chParam.Excavate, true);
+            status.money++;
             //if (status.ATK < )
             //{
 
             //}
         }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Excavate();
     }
 }
