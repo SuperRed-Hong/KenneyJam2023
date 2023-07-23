@@ -16,12 +16,7 @@ public class EnemyStatus : MonoBehaviour
     public float ATK = 1;
 
     //public float knockbackForce = 2;
-    private Rigidbody2D rb;
     private PlayerStatus plaStatus;
-    private void Awake()
-    {
-        rb = GetComponent<Rigidbody2D>();
-    }
     
     private void OnTriggerEnter2D(Collider2D collision)
     {

@@ -29,7 +29,7 @@ public class PlayerStatus : MonoBehaviour
     [Tooltip("最大水资源")]
     public float maxWater;
     [Tooltip("攻击力")]
-    public float ATK = 1;
+    public float ATK = 10;
     [Tooltip("攻击间隔")]
     public float ATKInterval = 0.5f;
     [Tooltip("重生时间")]

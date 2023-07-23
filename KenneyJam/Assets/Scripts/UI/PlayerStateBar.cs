@@ -1,9 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Unity.UI;
 using UnityEngine.UI;
-using UnityEditor.UIElements;
 using TMPro;
 
 public class PlayerStateBar : MonoBehaviour
@@ -15,14 +13,11 @@ public class PlayerStateBar : MonoBehaviour
     public float delaySpeed;
     public TextMeshProUGUI money;
     public GameObject water;
-    private void Awake()
-    {
 
-    }
     private void Update()
     {
         
-        OnHealthChange();
+        OnHealthChange(GameObject.FindGameObjectWithTag("Home").GetComponent<BaseController>().HP / 1500.0f);
         if(player.currentWater <= 0)
         {
             water.SetActive(true);
@@ -35,9 +30,8 @@ public class PlayerStateBar : MonoBehaviour
     /// <summary>
     /// 
     /// </summary>
-    public void OnHealthChange()
+    public void OnHealthChange(float hpPersentage)
     {
-        float hpPersentage = player.currentHP / player.maxHP; 
         float waterPersentage = player.currentWater / player.maxWater;
         healthImage.fillAmount = hpPersentage;
         waterImage.fillAmount = waterPersentage;

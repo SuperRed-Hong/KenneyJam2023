@@ -36,4 +36,14 @@ public class BaseController : MonoBehaviour
         HP = 1500;
         shop.shopUI = shopUI;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "Enemy")
+        {
+            //TODO
+            OnAttack(100);
+            Destroy(collision.gameObject);
+        }
+    }
 }
