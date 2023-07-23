@@ -10,6 +10,9 @@ static public class MapGenerator
     const float rateOfMineral1=0.1f;
     const float rateOfMineral2=0.05f;
     const float rateOfMineral3=0.01f;
+    const float rateOfMineral1InRoom=0.3f;
+    const float rateOfMineral2InRoom=0.15f;
+    const float rateOfMineral3InRoom=0.03f;
     const int roomMinHeight=4,roomMaxHeight=7,roomMinWidth=4,roomMaxWidth=7;
     const int interval=2;
 
@@ -26,7 +29,15 @@ static public class MapGenerator
         {
             for(int y=0;y<mapHeight;y++)
             {
-                visibleMap[x,y]=MapCellType.rock;
+                float randV=Random.value;
+                if(randV<rateOfMineral3)
+                    visibleMap[x,y]=MapCellType.mineral3;
+                else if(randV<rateOfMineral2)
+                    visibleMap[x,y]=MapCellType.mineral2;
+                else if(randV<rateOfMineral1)
+                    visibleMap[x,y]=MapCellType.mineral1;
+                else
+                    visibleMap[x,y]=MapCellType.rock;
                 roomMap[x,y]=MapCellType.notRoom;
             }
         }
@@ -136,12 +147,12 @@ static public class MapGenerator
                 if(type==MapCellType.mineralRoom)
                 {
                     float randV=Random.value;
-                    if(randV<rateOfMineral1)
-                        visibleMap[x+i,y+j]=MapCellType.mineral1;
-                    else if(randV<rateOfMineral2)
-                        visibleMap[x+i,y+j]=MapCellType.mineral2;
-                    else if(randV<rateOfMineral3)
+                    if(randV<rateOfMineral3InRoom)
                         visibleMap[x+i,y+j]=MapCellType.mineral3;
+                    else if(randV<rateOfMineral2InRoom)
+                        visibleMap[x+i,y+j]=MapCellType.mineral2;
+                    else if(randV<rateOfMineral1InRoom)
+                        visibleMap[x+i,y+j]=MapCellType.mineral1;
                 }
             }
         }
