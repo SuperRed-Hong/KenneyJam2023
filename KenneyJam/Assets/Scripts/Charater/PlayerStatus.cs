@@ -3,35 +3,36 @@ using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
 /// <summary>
-/// ç©å®¶å±æ€§ï¼Œè´Ÿè´£æä¾›ç©å®¶çš„ä¿¡æ¯ï¼Œæš‚æ—¶é¢å¤–è¿›è¡Œå—å‡»åé¦ˆ
-/// ç©å®¶åªéœ€è¦æŒ‚è¿™ä¸ªç±»ï¼Œä¼šè‡ªåŠ¨æŒ‚è½½å…¶ä»–ç©å®¶æ‰€éœ€ç±»ã€‚
-/// </summary> 
-[RequireComponent(typeof(CharacterController))]//ç»‘å®šè§’è‰²ç§»åŠ¨
-//[RequireComponent(typeof(CharacterExcavate))]//ç»‘å®šæŒ–æ˜
+/// /// Íæ¼ÒÊôĞÔ£¬¸ºÔğÌá¹©Íæ¼ÒµÄĞÅÏ¢£¬ÔİÊ±¶îÍâ½øĞĞÊÜ»÷·´À¡
+/// Íæ¼ÒÖ»ĞèÒª¹ÒÕâ¸öÀà£¬»á×Ô¶¯¹ÒÔØÆäËûÍæ¼ÒËùĞèÀà¡£
+/// </summary>
+[RequireComponent(typeof(CharacterController))]//°ó¶¨½ÇÉ«ÒÆ¶¯
+//[RequireComponent(typeof(CharacterExcavate))]//°ó¶¨ÍÚ¾ò
 public class PlayerStatus : MonoBehaviour
 {
-    [Tooltip("æ®ç‚¹çš„Transformç»„ä»¶")]
+    [Tooltip("¾İµãµÄTransform×é¼ş")]
     public Transform HomeTF;
-    [Tooltip("åŠ¨ç”»å‚æ•°ç±»")]
+    [Tooltip("¶¯»­²ÎÊı´æ´¢Àà")]
     public CharacterAnimatorParam chParam;
+
     private CharacterController chController;
     private CharacterExcavate chExcavate;
 
-    [Tooltip("å½“å‰è¡€é‡å€¼")]
+    [Tooltip("½ÇÉ«µ±Ç°HP")]
     public int currentHP = 100;
-    [Tooltip("æœ€å¤§è¡€é‡å€¼")]
+    [Tooltip("½ÇÉ«×î´óÉúÃüÖµ")]
     public int maxHP = 100;
-    [Tooltip("é’±")]
+    [Tooltip("Ç®")]
     public int money = 0;
-    [Tooltip("å½“å‰æ°´èµ„æº")]
+    [Tooltip("µ±Ç°Ë®×ÊÔ´")]
     public int currentWater = 20;
-    [Tooltip("æœ€å¤§æ°´èµ„æº")]
+    [Tooltip("×î´óË®×ÊÔ´")]
     public int maxWater = 20;
-    [Tooltip("æ”»å‡»åŠ›")]
+    [Tooltip("¹¥»÷Á¦")]
     public int ATK = 1;
-    [Tooltip("æ”»å‡»åŠ›é—´éš”")]
+    [Tooltip("¹¥»÷¼ä¸ô")]
     public float ATKInterval = 0.5f;
-    [Tooltip("å¤æ´»æ—¶é—´")]
+    [Tooltip("ÖØÉúÊ±¼ä")]
     public float reviveTime = 2f;
 
     private void Awake()

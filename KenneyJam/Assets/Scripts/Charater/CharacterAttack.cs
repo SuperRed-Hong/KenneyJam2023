@@ -26,7 +26,7 @@ public class CharacterAttack : MonoBehaviour
     {
         attackCountdown += Time.deltaTime;
         fire = Input.GetAxis("Fire1");
-        if (fire != 0 && attackCountdown > 0.5f)
+        if (fire != 0 && attackCountdown > status.ATKInterval)
         {
             Debug.Log("fire");
        
