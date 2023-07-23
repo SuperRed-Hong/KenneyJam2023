@@ -28,6 +28,7 @@ public class CharacterController : MonoBehaviour
     {
         status = GetComponent<PlayerStatus>();
         mapcol = GameObject.FindGameObjectWithTag(MapControllerTag).GetComponent<MapController>();
+        transform.position = mapcol.GenerateMap();
     }
     public void Update()
     {

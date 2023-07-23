@@ -29,6 +29,8 @@ public class MapController : MonoBehaviour
     GameManager gameManager;
     [SerializeField]
     GameObject turretPrefab;
+    [SerializeField]
+    GameObject basePrefab;
 
     private MapCellType[,] visibleMap;
     private MapCellType[,] roomMap;
@@ -49,8 +51,6 @@ public class MapController : MonoBehaviour
 
         originx=-mapWidth+2;
         originy=-mapHeight/2;
-
-        Invoke("GenerateMap",1f);
     }
 
     public Vector2 GenerateMap()
@@ -178,6 +178,10 @@ public class MapController : MonoBehaviour
             else if(roomMap[visibleTilemap.WorldToCell(i).x-originx,visibleTilemap.WorldToCell(i).y-originy]==MapCellType.turretRoom)
             {
                 Transform.Instantiate(turretPrefab,i,turretPrefab.transform.rotation).GetComponent<TowerController>().level=Random.Range(1,4);
+            }
+            else if (roomMap[visibleTilemap.WorldToCell(i).x - originx, visibleTilemap.WorldToCell(i).y - originy] == MapCellType.strongholdRoom)
+            {
+                Transform.Instantiate(basePrefab, i, basePrefab.transform.rotation).GetComponent<BaseController>().Initialize();
             }
         }
     }

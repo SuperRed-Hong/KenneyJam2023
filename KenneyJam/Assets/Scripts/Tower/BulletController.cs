@@ -40,9 +40,12 @@ public class BulletController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //TODO:’®ªŸµÿøÈ
-        if (collision.gameObject.name == "Tilemap" && canExcavate)
+        if (collision.gameObject.layer == 6)
         {
-
+            if (canExcavate)
+            {
+                //TODO
+            }
             Destory();
         }
         //TODO:‘Ï≥……À∫¶

@@ -8,7 +8,7 @@ public class EnemyDetection : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "Enemy")
+        if (collision.gameObject.tag == "Enemy")
         {
             transform.parent.GetComponent<TowerController>().enemyInDetection.Add(collision.gameObject);
         }
@@ -16,7 +16,7 @@ public class EnemyDetection : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "Enemy")
+        if (collision.gameObject.tag == "Enemy")
         {
             transform.parent.GetComponent<TowerController>().enemyInDetection.Remove(collision.gameObject);
         }

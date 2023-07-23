@@ -2447,6 +2447,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4c34d94aee01e8545b70d34e73857cb5, type: 2}
   gameManager: {fileID: 850643537}
   turretPrefab: {fileID: 7517525233098790559, guid: 227447361fe3015408d672fa83423b90, type: 3}
+  basePrefab: {fileID: 8797784028639719141, guid: 9e04a4006c2b8ba459d2c0eadc50e4ed, type: 3}
 --- !u!4 &446390874
 Transform:
   m_ObjectHideFlags: 0
@@ -3506,27 +3507,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_RenderShadows: 1
-  m_RequiresDepthTextureOption: 2
-  m_RequiresOpaqueTextureOption: 2
-  m_CameraType: 0
-  m_Cameras: []
-  m_RendererIndex: -1
-  m_VolumeLayerMask:
-    serializedVersion: 2
-    m_Bits: 1
-  m_VolumeTrigger: {fileID: 0}
-  m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
-  m_Antialiasing: 0
-  m_AntialiasingQuality: 2
-  m_StopNaN: 0
-  m_Dithering: 0
-  m_ClearDepth: 1
-  m_AllowXRRendering: 1
-  m_RequiresDepthTexture: 0
-  m_RequiresColorTexture: 0
-  m_Version: 2
 --- !u!1 &767502303
 GameObject:
   m_ObjectHideFlags: 0
@@ -4279,7 +4259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 687aa2d445c80b349b97589c80cfe466, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPre: {fileID: 937050664082396333, guid: eff68d2478f7d2e47929f5fff580b5e9, type: 3}
+  enemyPre: {fileID: 937050664082396333, guid: 8e8aa4f179f2ba64994c82df3d6167ae, type: 3}
   minCreate: 3
   maxCreate: 10
   testTF: {fileID: 0}
@@ -7863,10 +7843,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
