@@ -2,34 +2,48 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 /// <summary>
-/// Íæ¼Ò¹¥»÷Àà£¬¸ºÔğÍæ¼ÒµÄ¹¥»÷¡£²»¹ıÔİÊ±Ã»ÓÃ£¬µ«ÏÈÌá³öÀ´£¬ÒÔ·½±ãÀ©Õ¹
-/// Íæ¼ÒµÄÎäÆ÷¹Ò£¬ÓÉÎäÆ÷Åö×²Æ÷¼ì²âºÍ´¥·¢¡£
+/// ç©å®¶æ”»å‡»ç±»ï¼Œè´Ÿè´£ç©å®¶çš„æ”»å‡»ã€‚ä¸è¿‡æš‚æ—¶æ²¡ç”¨ï¼Œä½†å…ˆæå‡ºæ¥ï¼Œä»¥æ–¹ä¾¿æ‰©å±•
+/// ç©å®¶çš„æ­¦å™¨æŒ‚ï¼Œç”±æ­¦å™¨ç¢°æ’å™¨æ£€æµ‹å’Œè§¦å‘ã€‚
 /// </summary>
 public class CharacterAttack : MonoBehaviour
 {
     private PlayerStatus status;
-    private Animator anim;
+    public Animator anim;
     private EnemyStatus enemystatus;
     private float attackCountdown;
     private float fire;
+    private Vector3 direction;
+    private CharacterController characterController;
     [SerializeField]
     private string EnemyTag;
     private void Awake()
     {
         status = GetComponentInParent<PlayerStatus>();
-        anim = GetComponentInParent<Animator>();
+        
+        characterController = GetComponentInParent<CharacterController>();
     }
     private void Update()
     {
         attackCountdown += Time.deltaTime;
         fire = Input.GetAxis("Fire1");
-        if (fire != 0)
+        if (fire != 0 && attackCountdown > 0.5f)
         {
-            //anim.SetBool(status.chParam.Attact, false);
+            Debug.Log("fire");
+       
+
+            direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+            float rotz = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(0, 0, rotz);
+            anim.SetBool("attack", true);
+            attackCountdown = 0;
+
         }
         else
         {
+
             //anim.SetBool(status.chParam.Attact, false);
+            anim.SetBool("attack", false);
+
         }
 
 

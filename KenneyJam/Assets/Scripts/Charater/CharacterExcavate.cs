@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 /// <summary>
-/// 角色的挖掘类，负责提供挖掘功能。提出来，以方便扩展
+/// 瑙掕壊鐨勬寲鎺樼被锛岃礋璐ｆ彁渚涙寲鎺樺姛鑳姐�傛彁鍑烘潵锛屼互鏂逛究鎵╁睍
 /// </summary>
 public class CharacterExcavate : MonoBehaviour
 {
@@ -18,7 +18,7 @@ public class CharacterExcavate : MonoBehaviour
         if (status.currentWater > 0)
         {
             status.currentWater--;
-            anim.SetBool(status.chParam.Excavate, true);
+            //anim.SetBool(status.chParam.Excavate, true);
             status.money++;
             //if (status.ATK < )
             //{

@@ -19,6 +19,6 @@ public class PlayerAnimation : MonoBehaviour
     {
         animator.SetFloat("input.x" , characterController.inputDirection.x);
         animator.SetFloat("input.y", characterController.inputDirection.y);
-
+        
     }
 }

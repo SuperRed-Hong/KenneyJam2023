@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 /// <summary>
-/// ¶¯»­²ÎÊıÀà£¬¸ºÔğ´æ´¢¶¯»­µÄ²ÎÊıÃû×Ö£¬ÒÔ·½±ã´úÂëÖ±½Ó±äÁ¿µ÷ÓÃºÍĞŞ¸Ä¡£
+/// åŠ¨ç”»å‚æ•°ç±»ï¼Œè´Ÿè´£å­˜å‚¨åŠ¨ç”»çš„å‚æ•°åå­—ï¼Œä»¥æ–¹ä¾¿ä»£ç ç›´æ¥å˜é‡è°ƒç”¨å’Œä¿®æ”¹ã€‚
 /// 
 /// </summary>
 
 [System.Serializable]
 public class CharacterAnimatorParam 
 {
-    [Tooltip("ÍÚ¾ò¶¯»­Ãû×Ö")]
+    [Tooltip("æŒ–æ˜åŠ¨ç”»åå­—")]
     public string Excavate = "Excavate";
-    [Tooltip("ÅÜ²½¶¯»­Ãû×Ö")]
+    [Tooltip("è·‘æ­¥åŠ¨ç”»åå­—")]
     public string Run = "Run";
-    [Tooltip("¹¥»÷¶¯»­Ãû×Ö")]
-    public string Attact = "Attact";
+    [Tooltip("æ”»å‡»åŠ¨ç”»åå­—")]
+    public string Attact = "attack";
 }

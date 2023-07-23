@@ -2,24 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 /// <summary>
-/// ÓÎÏ·¹ÜÀíÀà
+/// æ¸¸æˆç®¡ç†ç±»
 /// </summary>
 public class GameManager : MonoBehaviour
 {
-    [Tooltip("µĞÈËµÄÔ¤ÖÆ¼ş")]
+    [Tooltip("æ•Œäººçš„é¢„åˆ¶ä»¶")]
     public GameObject enemyPre;
-    [Tooltip("Éú³ÉµĞÈËµÄ×îĞ¡µÄËæ»úÖµ")]
+    [Tooltip("ç”Ÿæˆæ•Œäººçš„æœ€å°çš„éšæœºå€¼")]
     public int minCreate = 1;
-    [Tooltip("Éú³ÉµĞÈËµÄ×î´óµÄËæ»úÖµ")]
+    [Tooltip("ç”Ÿæˆæ•Œäººçš„æœ€å¤§çš„éšæœºå€¼")]
     public int maxCreate = 10;
-    [Tooltip("Êµ¼ÊÉú³ÉµĞÈËµÄÊıÁ¿")]
+    [Tooltip("å®é™…ç”Ÿæˆæ•Œäººçš„æ•°é‡")]
     private int createnum;
     [SerializeField]
     private Transform testTF;
     /// <summary>
-    /// Éú³ÉµĞÈË
+    /// ç”Ÿæˆæ•Œäºº
     /// </summary>
-    /// <param name="coordinate">µĞÈËµÄÉú³Éµã</param>
+    /// <param name="coordinate">æ•Œäººçš„ç”Ÿæˆç‚¹</param>
     public void CreateEnemy(Vector2 coordinate)
     {
         createnum = Random.Range(minCreate, maxCreate);
@@ -29,12 +29,12 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    //private void OnGUI()
-    //{
-    //    if (GUILayout.Button("Éú³ÉµĞÈË"))
-    //    {
-    //        CreateEnemy(new Vector2(testTF.position.x,testTF.position.z));
-    //    }
-    //}
+    private void OnGUI()
+    {
+        if (GUILayout.Button("ç”Ÿæˆæ•Œäºº"))
+        {
+            CreateEnemy(new Vector2(testTF.position.x, testTF.position.z));
+        }
+    }
 
 }
