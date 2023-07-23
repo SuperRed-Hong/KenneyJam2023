@@ -6,9 +6,7 @@ public enum MapCellType
     //block type
     rock,
     bedrock,
-    mineral1,
-    mineral2,
-    mineral3,
+    mineral,
     air,
     //room type
     notRoom,

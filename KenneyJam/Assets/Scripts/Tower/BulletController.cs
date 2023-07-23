@@ -46,10 +46,10 @@ public class BulletController : MonoBehaviour
             Destory();
         }
         //TODO:‘Ï≥……À∫¶
-        if (collision.gameObject.name == "Enemy")
-        {
+        //if (collision.gameObject.name == "Enemy")
+        //{
 
-            Destory();
-        }
+        //    Destory();
+        //}
     }
 }
