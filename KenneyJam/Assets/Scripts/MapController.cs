@@ -49,7 +49,7 @@ public class MapController : MonoBehaviour
         originy=-mapHeight/2;
     }
 
-    public void GenerateMap()
+    public Vector2 GenerateMap()
     {
         roomCenterPos.Clear();
         originx+=mapWidth-2;
@@ -60,6 +60,7 @@ public class MapController : MonoBehaviour
             roomCenterPos[i]+=new Vector2(originx,originy);
             Debug.Log(roomCenterPos[i]);
         }
+        return roomCenterPos[0];
     }
 
     private void CreateMap()
