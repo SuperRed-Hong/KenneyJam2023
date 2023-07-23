@@ -88,15 +88,10 @@ public class TowerController : MonoBehaviour
     {
         if (powerOn)
         {
-            if (enemyInDetection.Count == 0)
-            {
-                Gun.transform.rotation = Quaternion.AngleAxis(90.0f, Vector3.forward);
-                return;
-            }
+            if (enemyInDetection.Count == 0) return;
             if (enemyInDetection[0] == null)
             {
                 enemyInDetection.RemoveAt(0);
-                Gun.transform.rotation = Quaternion.identity;
                 return;
             }
             targetDir = enemyInDetection[0].transform.position - transform.position;

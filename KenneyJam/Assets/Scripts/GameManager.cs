@@ -29,12 +29,14 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    //private void OnGUI()
-    //{
-    //    if (GUILayout.Button("生成敌人"))
-    //    {
-    //        CreateEnemy(new Vector2(testTF.position.x,testTF.position.z));
-    //    }
-    //}
-
+    private void OnGUI()
+    {
+        if (GUILayout.Button("生成敌人"))
+        {
+            CreateEnemy(new Vector2(testTF.position.x, testTF.position.z));
+        }
+        
+    }
+   
+    
 }

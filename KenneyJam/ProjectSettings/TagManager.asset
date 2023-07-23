@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - Weapon
   - Home
+  - MaManager
   layers:
   - Default
   - TransparentFX
@@ -15,8 +16,8 @@ TagManager:
   - Water
   - UI
   - wall
-  - 
-  - 
+  - Weapon
+  - Player
   - 
   - 
   - 
@@ -43,13 +44,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: back
-    uniqueID: 881479019
-    locked: 0
-  - name: mid
-    uniqueID: 2712491635
-    locked: 0
-  - name: front
-    uniqueID: 2857857791
     locked: 0

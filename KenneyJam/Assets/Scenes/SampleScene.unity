@@ -293,7 +293,6 @@ MonoBehaviour:
   maxHP: 100
   currentHP: 80
   ATK: 1
-  knockbackForce: 2
 --- !u!1 &470848527
 GameObject:
   m_ObjectHideFlags: 0
@@ -695,7 +694,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac70d097d452d9949aba62c85cd424fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TF: {fileID: 1747155202}
+  HomeTF: {fileID: 0}
   chParam:
     Excavate: Excavate
     Run: Run

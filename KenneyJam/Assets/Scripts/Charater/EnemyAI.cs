@@ -4,7 +4,12 @@ using UnityEngine;
 using Pathfinding;
 using System;
 /// <summary>
+/// 敌人寻路AI
+/// 使用此脚本需要在场景中放置一个空物体并且添加上Pathfinder脚本，此脚本才可以运行
+/// 此脚本只需要挂在到敌人身上*********已经自动挂载到预制件
 /// 
+/// 使用说明
+///     必须在场景中给据点设置Home标签 用于自动获取据点的游戏对象
 /// </summary>
 public class EnemyAI : MonoBehaviour
 {
