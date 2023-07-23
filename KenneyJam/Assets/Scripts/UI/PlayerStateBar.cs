@@ -29,8 +29,8 @@ public class PlayerStateBar : MonoBehaviour
     /// </summary>
     public void OnHealthChange()
     {
-        var hpPersentage = player.currentHP / player.maxHP; 
-        var waterPersentage = player.currentWater / player.maxWater;
+        float hpPersentage = player.currentHP / player.maxHP; 
+        float waterPersentage = player.currentWater / player.maxWater;
         healthImage.fillAmount = hpPersentage;
         waterImage.fillAmount = waterPersentage;
         money.text = player.money.ToString();

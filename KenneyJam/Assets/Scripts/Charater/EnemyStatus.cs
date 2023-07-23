@@ -2,18 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 /// <summary>
-/// µĞÈË×´Ì¬Àà£¬ ¸ºÔğÌá¹©µĞÈËµÄĞÅÏ¢£¬ÔİÊ±¶îÍâ½øĞĞÊÜ»÷·´À¡
-/// Ö»ÓĞµĞÈË¹Ò
+/// æ•ŒäººçŠ¶æ€ç±»ï¼Œ è´Ÿè´£æä¾›æ•Œäººçš„ä¿¡æ¯ï¼Œæš‚æ—¶é¢å¤–è¿›è¡Œå—å‡»åé¦ˆ
+/// åªæœ‰æ•ŒäººæŒ‚
 /// </summary>
 
 public class EnemyStatus : MonoBehaviour
 {
-    [Tooltip("µĞÈË×î´óÉúÃüÖµ")]
-    public int maxHP = 100;
-    [Tooltip("µĞÈËµ±Ç°ÉúÃüÖµ")]
-    public int currentHP = 80;
-    [Tooltip("µĞÈË¹¥»÷Á¦")]
-    public int ATK = 1;
+    [Tooltip("æ•Œäººæœ€å¤§ç”Ÿå‘½å€¼")]
+    public float maxHP = 100;
+    [Tooltip("æ•Œäººå½“å‰ç”Ÿå‘½å€¼")]
+    public float currentHP = 80;
+    [Tooltip("æ•Œäººæ”»å‡»åŠ›")]
+    public float ATK = 1;
 
     //public float knockbackForce = 2;
     private Rigidbody2D rb;
@@ -27,7 +27,7 @@ public class EnemyStatus : MonoBehaviour
     {
         if (collision.tag == "Weapon" )
         {
-            //print("´òÖĞÁË");
+            //print("æ‰“ä¸­äº†");
             plaStatus = collision.GetComponentInParent<PlayerStatus>();
             currentHP -= plaStatus.ATK;
             print(currentHP);
