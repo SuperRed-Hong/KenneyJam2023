@@ -13,7 +13,8 @@ public class PlayerStateBar : MonoBehaviour
     public Image healthDelayImage;
     public Image waterImage;
     public float delaySpeed;
-    public TextMeshProUGUI money; 
+    public TextMeshProUGUI money;
+    public GameObject water;
     private void Awake()
     {
 
@@ -22,7 +23,14 @@ public class PlayerStateBar : MonoBehaviour
     {
         
         OnHealthChange();
-
+        if(player.currentWater <= 0)
+        {
+            water.SetActive(true);
+        }
+        else
+        {
+            water.SetActive(false);
+        }
     }
     /// <summary>
     /// 
