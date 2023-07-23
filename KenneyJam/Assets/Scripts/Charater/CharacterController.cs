@@ -8,7 +8,7 @@ using UnityEditor;
 /// </summary>
 public class CharacterController : MonoBehaviour
 {
-    
+    private PlayerStatus status;
     private float hor;
     private float ver;
     [Tooltip("玩家移动速度")]
@@ -21,7 +21,14 @@ public class CharacterController : MonoBehaviour
     public bool left;
     public bool up;
     public bool down;
+    public string MapControllerTag;
+    private MapController mapcol;
 
+    private void Start()
+    {
+        status = GetComponent<PlayerStatus>();
+        mapcol = GameObject.FindGameObjectWithTag(MapControllerTag).GetComponent<MapController>();
+    }
     public void Update()
     {
         hor = Input.GetAxis("Horizontal");
@@ -31,15 +38,19 @@ public class CharacterController : MonoBehaviour
             inputDirection.x = hor;
             inputDirection.y = ver;
             Movement(hor, ver);
-        }
-        if (Input.GetMouseButtonDown(0))
-        {
-            
+            WaterBool();
         }
     }
     private void Movement(float hor,float ver)
     {
         transform.Translate(new Vector3(hor, ver, 0) * Time.deltaTime * _SpeedMove);
     }
-    
+    private void WaterBool()
+    {
+        if (mapcol.GetRoomType(transform.position) != MapCellType.notRoom)
+        {
+            status.SetMaxWater();
+        }
+    }
+
 }

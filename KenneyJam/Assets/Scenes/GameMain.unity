@@ -1306,37 +1306,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &163944948
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 163944949}
-  m_Layer: 0
-  m_Name: GameObject (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &163944949
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 163944948}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.39, y: 10.99, z: -0.20991369}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &208538874
 GameObject:
   m_ObjectHideFlags: 0
@@ -2253,7 +2222,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAABAIewf74kCZwIAAB4FAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVMtymzAU/RWP1nUGsGOb7lriOF0k8cTtZMNGQRejsZAYSfiRjP+9VwIMpSvL577OObrii3BpKsis0hvN2bNiQL5PiDuTb5M++ARnuldyxz+hy3nnzBYuifqcN2q5Qjx0ZUaVYDXPfsi9cMkBgrXkudLlmu0hUcYahHMqDGBIK+uqJUJfE3LGn2nsSi54ipbu9ImnOJhc8ZiBtKD71Fkc38Xz1SqK2oouv0mvZSZoWQFz3PuqMAi6CfdNokRdbY7TkCkhuGlJEXupvOiEVqZGSZjAOEWRnklwFyNQAN8X1lEelr/muQHb0tL08sA1utX0JT9VY2FJzaHhdqSidpMWc0+q6fn8X3ga+nCuVfnUjQ29Ilvw7PBGLxk1dmDxEH7omYfeoRMVB/oh4L0A+aI2WtWSYdDq2pXWBqKH/u9NWVJAdujxhuoIrKve8mB0P07D1Ys/J4KXH97IeQPshPKG+zUAjVfzCwn7JTFtC0Qdiz8GftP9cJvawCPXxmKoVSkdvQ9Va5dK1t4zp6a2idISPNySrkBSYS9bbGPHNziKDcaOIo/UvZt2eBvrnsOoxMN9fhCMQlt1ul2WKdTpGUzxWlvBJfSkXeAFfUqUlM2CDT3pyna1zmk2KNvXnP27WiRf5ffzbDlj8WwWAKPTKF8tozCa3a9gEYaLBfG7xyXqpGLbEG3twVuTfXOJe9Z9TiYbTSu/7EzT04Z/lmpgOZe52mUaQL42HW7EQeMQfJZszTgatANrufT3Tb5SIlR2AJbeGqVe6fpsNU37Limp+FFZh6Qk8d+PlDj4tstbDUcOJze8a3Yl179QSwMEFAAACAgAAEAh7FVx9yptAAAAeAAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPSMzTXUVBKL0osyCgGihiCOKWZKSB2tFKaRZqpSbK5cYqlsbFBakqirlGahbmRoZGxqUWqmaGhmZlSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAAEAh7B/viQJnAgAAHgUAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAAEAh7FVx9yptAAAAeAAAAAkAJAAAAAAAAAAAAAAAtAIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAABsAwAAAAA=
+    dataString: UEsDBBQAAAgIAABAIexbk5siZwIAAB4FAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVMtymzAU/RWP1k0GsONHdy1xnC6SeOJ2smGjoIvRWEiMHrGdjP+9VwIMpSvL577OObrii3Bpasit0hvN2ZNiQL5PiD+Tb5M++Agnuldyxz+hy3njzJY+iYacV2q5Qjz2ZUZVYDXPf8i98MkRgk7yQulqzfaQKmMNwgUVBjCklfXVEqGvCTnhz83Kl5zxlCz86RNPq2hywWMO0oLuU6er1e1qtlwmSVvR5TfpTuaCVjUwz72viqOom3DXJErU1eZ4DbkSgpuWFLHnOohOaW0cSsIEximKDEyi2wUCJfB9aT3lYflLURiwLS1Nz/dco1tNX/JTNRZW1Bwabh9UOD9pPgukmp5P/4Vv4hAutKoeu7FxUGRLnh9e6Tmnxg4sHsL3PfM4OHSk4kDfBbyVIJ/VRisnGQatdr7UGUju+79XZWkJ+aHHG6oj0NW95dHofryGSxB/SgWv3oORswbYCRUMD2sAGq/mFxIOS2LaFoh6Fn8M/Kb74Ta1gQeujcVQq1J6eu/KaZ9K1sEzr8bZVGkJAW5J1yCpsOcttrHjGxzFBmNHkQfq3007vI11z2FUEuA+P4pGoa06Xi/LlOr4BKZ8cVZwCT1pH3hGn1IlZbNgQ0+6sp3TBc0HZXvH2b+rRYplcTfLF1O2mk4jYPQmKZaLJE6md0uYx/F8TsLucYk6qdg2RFt78NZk31zinnWfk8lG0zosO9P0uOGflRpYzmWhdrkGkC9Nhytx0DgEnyVbM44G7cBaLsN9k6+MCJUfgGXXRllQuj5ZTbO+S0Zq/qGsRzKShu9HRjx83eWthg8ORz+8a3Yhl79QSwMEFAAACAgAAEAh7FVx9yptAAAAeAAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPSMzTXUVBKL0osyCgGihiCOKWZKSB2tFKaRZqpSbK5cYqlsbFBakqirlGahbmRoZGxqUWqmaGhmZlSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAAEAh7FuTmyJnAgAAHgUAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAAEAh7FVx9yptAAAAeAAAAAkAJAAAAAAAAAAAAAAAtAIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAABsAwAAAAA=
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -2385,6 +2354,114 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 432582798}
   m_CullTransparentMesh: 1
+--- !u!1 &446390872
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 446390874}
+  - component: {fileID: 446390873}
+  m_Layer: 0
+  m_Name: TilemapManager
+  m_TagString: TilemapManager
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &446390873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 446390872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47a38a2255479614eba3deb8a50649c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mapHeight: 30
+  mapWidth: 60
+  startingRoomWidth: 10
+  numberOfTurrets: 3
+  numberOfMonsters: 3
+  visibleTilemap: {fileID: 1399313566}
+  fogTilemap: {fileID: 106973194}
+  blockParm:
+  - type: 5
+    tile:
+    - {fileID: 0}
+  - type: 0
+    tile:
+    - {fileID: 11400000, guid: a33a7e22ea0c65747bf27ff5a0cada84, type: 2}
+    - {fileID: 11400000, guid: 665a507f11407fb42913a41d4c92f9e1, type: 2}
+    - {fileID: 11400000, guid: b905238f0a558e14eafd91fe0ffce182, type: 2}
+  - type: 1
+    tile:
+    - {fileID: 11400000, guid: 6b6065db2e9c0dc4592f0a1a06d7313a, type: 2}
+  - type: 2
+    tile:
+    - {fileID: 11400000, guid: 8df7ece582de55c4bb740a9305b921d2, type: 2}
+    - {fileID: 11400000, guid: 5fb665848177296449e5479c9871b93a, type: 2}
+    - {fileID: 11400000, guid: 9dea27e38dab5734d8c7a662466c6471, type: 2}
+  - type: 3
+    tile:
+    - {fileID: 11400000, guid: 9c9a2ab6d8c299a48a8e24b8eadd8bc0, type: 2}
+    - {fileID: 11400000, guid: a616d3898d1870a448754a77621c616b, type: 2}
+    - {fileID: 11400000, guid: f8a39dd6d71021d4da63fc5b475eebe5, type: 2}
+  - type: 4
+    tile:
+    - {fileID: 11400000, guid: 6e3f80bff601015449f6a670085f6b82, type: 2}
+    - {fileID: 11400000, guid: 1d0ba4a19abaebb4ea0ea366cacfcd6e, type: 2}
+    - {fileID: 11400000, guid: 3e757b59fffe33243b2b0e514d8eadfe, type: 2}
+  fogTile: {fileID: 11400000, guid: 20035c6e70f03e94eb7de977e97815b8, type: 2}
+  mineralRockTile0:
+  - {fileID: 11400000, guid: 418458ac1a7754b408bbe7e1a7d79295, type: 2}
+  - {fileID: 11400000, guid: d9c94682dfc72f2499ca7278fe8d4d1c, type: 2}
+  - {fileID: 11400000, guid: 43037792fea864f42b6a5425c625ff1f, type: 2}
+  - {fileID: 11400000, guid: 3b82989bd144eaa4a9f4b1dfea07fb24, type: 2}
+  - {fileID: 11400000, guid: 1e1c8d40e1cf0a94091be91ea9cc1013, type: 2}
+  - {fileID: 11400000, guid: 46ffaca82419d13489a37fa7db82859c, type: 2}
+  - {fileID: 11400000, guid: 0794e01e69053b54a9caf6514dd526f5, type: 2}
+  - {fileID: 11400000, guid: fa8c6b65e0160ee48b8301a0a2315236, type: 2}
+  mineralRockTile1:
+  - {fileID: 11400000, guid: 1a4860108bcda52488f7982c7e92088c, type: 2}
+  - {fileID: 11400000, guid: 94797165b23e48f4cbcb8fb1546fc960, type: 2}
+  - {fileID: 11400000, guid: efc661fcd6afa664c92b572f3270a29a, type: 2}
+  - {fileID: 11400000, guid: 497a3ac5da45b0d4583012f348f37e80, type: 2}
+  - {fileID: 11400000, guid: f86b2bc07635db244816732f477399da, type: 2}
+  - {fileID: 11400000, guid: fc1373f97648dd6418cf287ac4049a09, type: 2}
+  - {fileID: 11400000, guid: 516dea748e20a394d80aa754245297d4, type: 2}
+  - {fileID: 11400000, guid: c3b8260485da98743a3c3207caed3459, type: 2}
+  mineralRockTile2:
+  - {fileID: 11400000, guid: dc25ef45bf8f0d740b9d1c38bb9b5290, type: 2}
+  - {fileID: 11400000, guid: 3fe0e06eba2a2b74888a916a835ac3a5, type: 2}
+  - {fileID: 11400000, guid: 2954c16e29dd7794292fc3047ee99d94, type: 2}
+  - {fileID: 11400000, guid: 6d747c6bf17805b4f868fb1d6446d371, type: 2}
+  - {fileID: 11400000, guid: 75a7c956c3ab0664e80cc89c8a7bc0cc, type: 2}
+  - {fileID: 11400000, guid: 54ad1935f562e2e408492d94936abaad, type: 2}
+  - {fileID: 11400000, guid: 93608baa6018e0a49a9b65255de0c74b, type: 2}
+  - {fileID: 11400000, guid: 4c34d94aee01e8545b70d34e73857cb5, type: 2}
+  gameManager: {fileID: 850643537}
+  turretPrefab: {fileID: 7517525233098790559, guid: 227447361fe3015408d672fa83423b90, type: 3}
+--- !u!4 &446390874
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 446390872}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.1368998, y: 1.6330986, z: 0.07379635}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &486838322
 GameObject:
   m_ObjectHideFlags: 0
@@ -4171,7 +4248,7 @@ MonoBehaviour:
   enemyPre: {fileID: 937050664082396333, guid: eff68d2478f7d2e47929f5fff580b5e9, type: 3}
   minCreate: 3
   maxCreate: 10
-  testTF: {fileID: 163944949}
+  testTF: {fileID: 0}
 --- !u!1 &910985252
 GameObject:
   m_ObjectHideFlags: 0
@@ -4614,6 +4691,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1013173161}
   m_CullTransparentMesh: 1
+--- !u!1 &1017552105
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1017552107}
+  - component: {fileID: 1017552106}
+  m_Layer: 0
+  m_Name: BulletParent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1017552106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1017552105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f5ce09146035d140a722658e7ef5c56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletSprites:
+  - {fileID: 1912138036, guid: 8dc6383278316984e8c3ebccee2f04f9, type: 3}
+  - {fileID: 840047350, guid: 8dc6383278316984e8c3ebccee2f04f9, type: 3}
+  - {fileID: -744255028, guid: 8dc6383278316984e8c3ebccee2f04f9, type: 3}
+--- !u!4 &1017552107
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1017552105}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1061453278
 GameObject:
   m_ObjectHideFlags: 0
@@ -7398,7 +7523,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 850643536}
-  mapController: {fileID: 1605273171}
+  mapController: {fileID: 446390873}
   arrowPrefab: {fileID: 5968418277419073096, guid: 39302553699827e4b88d5e54ffa6badf, type: 3}
   modifier: 0.1
 --- !u!4 &1429311712
@@ -7863,7 +7988,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: 20
-  mapController: {fileID: 1605273171}
+  mapController: {fileID: 446390873}
 --- !u!4 &1527426364
 Transform:
   m_ObjectHideFlags: 0
@@ -8149,100 +8274,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1604050522}
   m_CullTransparentMesh: 1
---- !u!1 &1605273170
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1605273172}
-  - component: {fileID: 1605273171}
-  m_Layer: 0
-  m_Name: TilemapManager
-  m_TagString: MaManager
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1605273171
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1605273170}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47a38a2255479614eba3deb8a50649c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mapHeight: 30
-  mapWidth: 60
-  startingRoomWidth: 10
-  numberOfTurrets: 3
-  numberOfMonsters: 3
-  visibleTilemap: {fileID: 1399313566}
-  fogTilemap: {fileID: 106973194}
-  blockParm:
-  - type: 2
-    tile:
-    - {fileID: 0}
-  - type: 0
-    tile:
-    - {fileID: 11400000, guid: a33a7e22ea0c65747bf27ff5a0cada84, type: 2}
-    - {fileID: 11400000, guid: 665a507f11407fb42913a41d4c92f9e1, type: 2}
-    - {fileID: 11400000, guid: b905238f0a558e14eafd91fe0ffce182, type: 2}
-  - type: 1
-    tile:
-    - {fileID: 11400000, guid: 6b6065db2e9c0dc4592f0a1a06d7313a, type: 2}
-  - type: 3
-    tile:
-    - {fileID: 0}
-  fogTile: {fileID: 11400000, guid: 20035c6e70f03e94eb7de977e97815b8, type: 2}
-  mineralRockTile0:
-  - {fileID: 11400000, guid: 418458ac1a7754b408bbe7e1a7d79295, type: 2}
-  - {fileID: 11400000, guid: d9c94682dfc72f2499ca7278fe8d4d1c, type: 2}
-  - {fileID: 11400000, guid: 43037792fea864f42b6a5425c625ff1f, type: 2}
-  - {fileID: 11400000, guid: 3b82989bd144eaa4a9f4b1dfea07fb24, type: 2}
-  - {fileID: 11400000, guid: 1e1c8d40e1cf0a94091be91ea9cc1013, type: 2}
-  - {fileID: 11400000, guid: 46ffaca82419d13489a37fa7db82859c, type: 2}
-  - {fileID: 11400000, guid: 0794e01e69053b54a9caf6514dd526f5, type: 2}
-  - {fileID: 11400000, guid: fa8c6b65e0160ee48b8301a0a2315236, type: 2}
-  mineralRockTile1:
-  - {fileID: 11400000, guid: 1a4860108bcda52488f7982c7e92088c, type: 2}
-  - {fileID: 11400000, guid: 94797165b23e48f4cbcb8fb1546fc960, type: 2}
-  - {fileID: 11400000, guid: efc661fcd6afa664c92b572f3270a29a, type: 2}
-  - {fileID: 11400000, guid: 497a3ac5da45b0d4583012f348f37e80, type: 2}
-  - {fileID: 11400000, guid: f86b2bc07635db244816732f477399da, type: 2}
-  - {fileID: 11400000, guid: fc1373f97648dd6418cf287ac4049a09, type: 2}
-  - {fileID: 11400000, guid: 516dea748e20a394d80aa754245297d4, type: 2}
-  - {fileID: 11400000, guid: c3b8260485da98743a3c3207caed3459, type: 2}
-  mineralRockTile2:
-  - {fileID: 11400000, guid: dc25ef45bf8f0d740b9d1c38bb9b5290, type: 2}
-  - {fileID: 11400000, guid: 3fe0e06eba2a2b74888a916a835ac3a5, type: 2}
-  - {fileID: 11400000, guid: 2954c16e29dd7794292fc3047ee99d94, type: 2}
-  - {fileID: 11400000, guid: 6d747c6bf17805b4f868fb1d6446d371, type: 2}
-  - {fileID: 11400000, guid: 75a7c956c3ab0664e80cc89c8a7bc0cc, type: 2}
-  - {fileID: 11400000, guid: 54ad1935f562e2e408492d94936abaad, type: 2}
-  - {fileID: 11400000, guid: 93608baa6018e0a49a9b65255de0c74b, type: 2}
-  - {fileID: 11400000, guid: 4c34d94aee01e8545b70d34e73857cb5, type: 2}
---- !u!4 &1605273172
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1605273170}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.1368998, y: 1.6330986, z: 0.07379635}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1607981494
 GameObject:
   m_ObjectHideFlags: 0
@@ -9676,6 +9707,7 @@ MonoBehaviour:
   left: 0
   up: 0
   down: 0
+  MapControllerTag: TilemapManager
 --- !u!114 &2080942597
 MonoBehaviour:
   m_ObjectHideFlags: 0
