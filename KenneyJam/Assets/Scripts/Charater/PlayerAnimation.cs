@@ -8,8 +8,8 @@ public class PlayerAnimation : MonoBehaviour
     public CharacterController characterController;
     private void Awake()
     {
-        animator = GetComponent<Animator>();    
-        characterController = GetComponent<CharacterController>();
+        animator = GetComponentInChildren<Animator>();    
+        characterController = GetComponentInParent<CharacterController>();
     }
     private void Update()
     {

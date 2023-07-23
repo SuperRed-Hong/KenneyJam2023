@@ -9,17 +9,23 @@ public class CharacterExcavate : MonoBehaviour
     private PlayerStatus status;
     private Animator anim;
     private MapController mapcol;
+    public float countTime;
+    public int countnum;
+    public int ExcavatePerS = 3;
+    public float ExcavateInterval = 0.5f;
     private void Awake()
     {
         status = GetComponentInParent<PlayerStatus>();
         anim = GetComponentInParent<Animator>();
-        GameObject go = GameObject.FindGameObjectWithTag("MaManager");
+        GameObject go = GameObject.FindGameObjectWithTag("TilemapManager");
         mapcol = go.GetComponent<MapController>();
     }
     private void Excavate(Collision2D col)
     {
         if (mapcol.GetBlockType(col.GetContact(0).point) == MapCellType.rock ||
-            mapcol.GetBlockType(col.GetContact(0).point) == MapCellType.mineral1)
+            mapcol.GetBlockType(col.GetContact(0).point) == MapCellType.mineral1||
+            mapcol.GetBlockType(col.GetContact(0).point) == MapCellType.mineral2||
+            mapcol.GetBlockType(col.GetContact(0).point) == MapCellType.mineral3)
         {
 
             if (status.currentWater > 0)
@@ -28,26 +34,56 @@ public class CharacterExcavate : MonoBehaviour
                 mapcol.DestroyCell(col.GetContact(0).point);
                 switch (mapcol.GetBlockType(col.GetContact(0).point))
                 {
-                    case MapCellType.air:
+                    case MapCellType.mineral1:
+                        status.money += 50;
+                        break;
+                    case MapCellType.mineral2:
                         status.money += 100;
                         break;
+                    case MapCellType.mineral3:
+                        status.money += 500;
+                        break;
                 }
+                countnum++;
+
             }
 
         }
         //Debug.Log(mapcol.GetBlockType(col.GetContact(0).point));
         //Debug.Log(col.GetContact(0).point);
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void Update()
     {
+        countTime += Time.deltaTime;
+        if (countTime >= 1)
+        {
+            countnum = 0;
+            countTime = 0;
+        }
+    }
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
 
-    }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        Excavate(collision);
-    }
+    //}
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    Excavate(collision);
+    //}
     private void OnCollisionStay2D(Collision2D collision)
     {
-        Excavate(collision);
+        if (ExcavatePerS > countnum)
+        {
+            Excavate(collision);
+        }
+
     }
+    //private void OnCollisionStay2D(Collision2D collision)
+    //{
+    //    Excavate(collision);
+    //}
+
+    //private void OnCollisionEnter(Collision collision)
+    //{
+
+    //}
 }

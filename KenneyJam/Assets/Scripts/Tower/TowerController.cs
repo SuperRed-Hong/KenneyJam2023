@@ -71,7 +71,7 @@ public class TowerController : MonoBehaviour
     private void Start()
     {
         // OnTest
-        //Initialize();
+        Initialize();
     }
 
     private void Update()

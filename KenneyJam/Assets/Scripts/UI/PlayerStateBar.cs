@@ -13,7 +13,8 @@ public class PlayerStateBar : MonoBehaviour
     public Image healthDelayImage;
     public Image waterImage;
     public float delaySpeed;
-    public TextMeshProUGUI money; 
+    public TextMeshProUGUI money;
+    public GameObject water;
     private void Awake()
     {
 
@@ -22,15 +23,22 @@ public class PlayerStateBar : MonoBehaviour
     {
         
         OnHealthChange();
-
+        if(player.currentWater <= 0)
+        {
+            water.SetActive(true);
+        }
+        else
+        {
+            water.SetActive(false);
+        }
     }
     /// <summary>
     /// 
     /// </summary>
     public void OnHealthChange()
     {
-        var hpPersentage = player.currentHP / player.maxHP;
-        var waterPersentage = player.currentWater / player.maxWater;
+        float hpPersentage = player.currentHP / player.maxHP; 
+        float waterPersentage = player.currentWater / player.maxWater;
         healthImage.fillAmount = hpPersentage;
         waterImage.fillAmount = waterPersentage;
         money.text = player.money.ToString();
@@ -38,7 +46,8 @@ public class PlayerStateBar : MonoBehaviour
         {
             healthDelayImage.fillAmount -= Time.deltaTime * delaySpeed;
         }
-        
+
+
     }
 
 }

@@ -3,47 +3,48 @@ using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
 /// <summary>
-/// /// Íæ¼ÒÊôĞÔ£¬¸ºÔğÌá¹©Íæ¼ÒµÄĞÅÏ¢£¬ÔİÊ±¶îÍâ½øĞĞÊÜ»÷·´À¡
-/// Íæ¼ÒÖ»ĞèÒª¹ÒÕâ¸öÀà£¬»á×Ô¶¯¹ÒÔØÆäËûÍæ¼ÒËùĞèÀà¡£
+/// /// ç©å®¶å±æ€§ï¼Œè´Ÿè´£æä¾›ç©å®¶çš„ä¿¡æ¯ï¼Œæš‚æ—¶é¢å¤–è¿›è¡Œå—å‡»åé¦ˆ
+/// ç©å®¶åªéœ€è¦æŒ‚è¿™ä¸ªç±»ï¼Œä¼šè‡ªåŠ¨æŒ‚è½½å…¶ä»–ç©å®¶æ‰€éœ€ç±»ã€‚
 /// </summary>
-[RequireComponent(typeof(CharacterController))]//°ó¶¨½ÇÉ«ÒÆ¶¯
-//[RequireComponent(typeof(CharacterExcavate))]//°ó¶¨ÍÚ¾ò
+[RequireComponent(typeof(CharacterController))]//ç»‘å®šè§’è‰²ç§»åŠ¨
+//[RequireComponent(typeof(CharacterExcavate))]//ç»‘å®šæŒ–æ˜
 public class PlayerStatus : MonoBehaviour
 {
-    [Tooltip("¾İµãµÄTransform×é¼ş")]
+    [Tooltip("æ®ç‚¹çš„Transformç»„ä»¶")]
     public Transform HomeTF;
-    [Tooltip("¶¯»­²ÎÊı´æ´¢Àà")]
+    [Tooltip("åŠ¨ç”»å‚æ•°å­˜å‚¨ç±»")]
     public CharacterAnimatorParam chParam;
 
     private CharacterController chController;
     private CharacterExcavate chExcavate;
 
-    [Tooltip("½ÇÉ«µ±Ç°HP")]
-    public int currentHP = 100;
-    [Tooltip("½ÇÉ«×î´óÉúÃüÖµ")]
-    public int maxHP = 100;
-    [Tooltip("Ç®")]
-    public int money = 0;
-    [Tooltip("µ±Ç°Ë®×ÊÔ´")]
-    public int currentWater = 20;
-    [Tooltip("×î´óË®×ÊÔ´")]
-    public int maxWater = 20;
-    [Tooltip("¹¥»÷Á¦")]
-    public int ATK = 1;
-    [Tooltip("¹¥»÷¼ä¸ô")]
+    [Tooltip("è§’è‰²å½“å‰HP")]
+    public float currentHP;
+    [Tooltip("è§’è‰²æœ€å¤§ç”Ÿå‘½å€¼")]
+    public float maxHP;
+    [Tooltip("é’±")]
+    public float money;
+    [Tooltip("å½“å‰æ°´èµ„æº")]
+    public float currentWater;
+    [Tooltip("æœ€å¤§æ°´èµ„æº")]
+    public float maxWater;
+    [Tooltip("æ”»å‡»åŠ›")]
+    public float ATK = 1;
+    [Tooltip("æ”»å‡»é—´éš”")]
     public float ATKInterval = 0.5f;
-    [Tooltip("ÖØÉúÊ±¼ä")]
+    [Tooltip("é‡ç”Ÿæ—¶é—´")]
     public float reviveTime = 2f;
 
     private void Awake()
     {
+        currentHP = maxHP;
+        currentWater = maxWater;
         chController = GetComponent<CharacterController>();
         chExcavate = GetComponent<CharacterExcavate>();
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.tag == "Enemy")
+        if (collision.transform.tag == "Enemy")
         {
             currentHP--;
             //print(currentHP);
@@ -54,7 +55,7 @@ public class PlayerStatus : MonoBehaviour
         }
     }
     /// <summary>
-    /// ËÀÍö·½·¨£¬²¢ÔËĞĞÑÓ³ÙÖØÉú
+    /// æ­»äº¡æ–¹æ³•ï¼Œå¹¶è¿è¡Œå»¶è¿Ÿé‡ç”Ÿ
     /// </summary>
     private void Death()
     {
@@ -68,16 +69,16 @@ public class PlayerStatus : MonoBehaviour
         currentHP = maxHP;
     }
     /// <summary>
-    /// ½«Ë®×ÊÔ´Ö±½ÓÉèÖÃÎªÂú
+    /// å°†æ°´èµ„æºç›´æ¥è®¾ç½®ä¸ºæ»¡
     /// </summary>
     public void SetMaxWater()
     {
         currentWater = maxWater;
     }
     /// <summary>
-    /// ¸øÍæ¼ÒÔö¼Ó½ğÇ®
+    /// ç»™ç©å®¶å¢åŠ é‡‘é’±
     /// </summary>
-    /// <param name="value">Ôö¼ÓµÄÖµ</param>
+    /// <param name="value">å¢åŠ çš„å€¼</param>
     public void AddMoney(int value)
     {
         money += value;

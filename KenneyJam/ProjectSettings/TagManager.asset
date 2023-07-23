@@ -8,6 +8,7 @@ TagManager:
   - Weapon
   - Home
   - MaManager
+  - TilemapManager
   layers:
   - Default
   - TransparentFX
