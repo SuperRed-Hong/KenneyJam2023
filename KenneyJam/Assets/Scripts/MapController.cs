@@ -12,7 +12,7 @@ public class MapController : MonoBehaviour
     [SerializeField]
     int numberOfTurrets,numberOfMonsters;
     [SerializeField]
-    Tilemap visibleTilemap,fogTilemap;
+    Tilemap visibleTilemap,fogTilemap,backgroundTilemap;
     [System.Serializable]
     class BlockParm
     {
@@ -22,7 +22,7 @@ public class MapController : MonoBehaviour
     [SerializeField]
     BlockParm[] blockParm;
     [SerializeField]
-    TileBase fogTile;
+    TileBase fogTile,backgroundTile;
     [SerializeField]
     List<TileBase> mineralRockTile0, mineralRockTile1,mineralRockTile2;
     [SerializeField]
@@ -104,10 +104,11 @@ public class MapController : MonoBehaviour
 
     private void CreateCell(int x,int y,MapCellType type)
     {
-        if(type==MapCellType.rock)
+        if(type==MapCellType.rock || type==MapCellType.mineral1 || type==MapCellType.mineral2 || type==MapCellType.mineral3)
             visibleTilemap.SetTile(new Vector3Int(x,y,0),blockParmDic[type].tile[rockTileId]);
         else
             visibleTilemap.SetTile(new Vector3Int(x,y,0),blockParmDic[type].tile[Random.Range(0,blockParmDic[type].tile.Count)]);
+        backgroundTilemap.SetTile(new Vector3Int(x,y,0),backgroundTile);
     }
 
     public void DestroyCell(Vector3 worldPos)
