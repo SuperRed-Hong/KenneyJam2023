@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 /// <summary>
-/// ½ÇÉ«µÄÍÚ¾òÀà£¬¸ºÔðÌá¹©ÍÚ¾ò¹¦ÄÜ¡£Ìá³öÀ´£¬ÒÔ·½±ãÀ©Õ¹
+/// ï¿½ï¿½É«ï¿½ï¿½ï¿½Ú¾ï¿½ï¿½à£¬ï¿½ï¿½ï¿½ï¿½ï¿½á¹©ï¿½Ú¾ï¿½ï¿½Ü¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô·ï¿½ï¿½ï¿½ï¿½ï¿½Õ¹
 /// </summary>
 public class CharacterExcavate : MonoBehaviour
 {
@@ -19,7 +19,7 @@ public class CharacterExcavate : MonoBehaviour
     private void Excavate(Collision2D col)
     {
         if (mapcol.GetBlockType(col.GetContact(0).point) == MapCellType.rock ||
-            mapcol.GetBlockType(col.GetContact(0).point) == MapCellType.mineral)
+            mapcol.GetBlockType(col.GetContact(0).point) == MapCellType.mineral1)
         {
 
             if (status.currentWater > 0)

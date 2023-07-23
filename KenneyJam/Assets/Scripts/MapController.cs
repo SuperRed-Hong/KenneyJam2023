@@ -60,7 +60,6 @@ public class MapController : MonoBehaviour
         for(int i=0;i<roomCenterPos.Count;i++)
         {
             roomCenterPos[i]+=new Vector2(originx,originy);
-            Debug.Log(roomCenterPos[i]);
         }
         GenerateObjects();
         return roomCenterPos[0];
@@ -176,7 +175,7 @@ public class MapController : MonoBehaviour
             }
             else if(roomMap[visibleTilemap.WorldToCell(i).x-originx,visibleTilemap.WorldToCell(i).y-originy]==MapCellType.turretRoom)
             {
-                Transform.Instantiate(turretPrefab,i,turretPrefab.transform.rotation);
+                Transform.Instantiate(turretPrefab,i,turretPrefab.transform.rotation).GetComponent<TowerController>().level=Random.Range(1,4);
             }
         }
     }
