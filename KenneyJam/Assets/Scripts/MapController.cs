@@ -60,6 +60,7 @@ public class MapController : MonoBehaviour
         for(int i=0;i<roomCenterPos.Count;i++)
         {
             roomCenterPos[i]+=new Vector2(originx,originy);
+            Debug.Log(roomCenterPos[i]);
         }
         GenerateObjects();
         return roomCenterPos[0];
