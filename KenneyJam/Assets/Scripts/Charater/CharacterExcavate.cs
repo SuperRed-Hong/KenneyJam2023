@@ -31,7 +31,6 @@ public class CharacterExcavate : MonoBehaviour
             if (status.currentWater > 0)
             {
                 status.currentWater--;
-                mapcol.DestroyCell(col.GetContact(0).point);
                 switch (mapcol.GetBlockType(col.GetContact(0).point))
                 {
                     case MapCellType.mineral1:
@@ -44,6 +43,7 @@ public class CharacterExcavate : MonoBehaviour
                         status.money += 500;
                         break;
                 }
+                mapcol.DestroyCell(col.GetContact(0).point);
                 countnum++;
 
             }

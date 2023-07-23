@@ -34,7 +34,7 @@ public class EnemyAI : MonoBehaviour
     private Rigidbody2D rb;
 
 
-    private void Start()
+    public void Initialize()
     {
         seeker = GetComponent<Seeker>();
         rb = GetComponentInChildren<Rigidbody2D>();
@@ -54,6 +54,10 @@ public class EnemyAI : MonoBehaviour
     {
         if (seeker.IsDone())
         {
+            if(target == null)
+            {
+                target = GameObject.FindGameObjectWithTag(HomeTag).GetComponent<Transform>();
+            }
             seeker.StartPath(rb.position, target.position, OnPathcomplete);
         }
     }

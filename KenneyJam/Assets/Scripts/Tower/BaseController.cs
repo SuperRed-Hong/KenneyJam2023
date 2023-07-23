@@ -6,6 +6,8 @@ public class BaseController : MonoBehaviour
 {
     public GameObject shield;
 
+    public Spawn shop;
+
     public Transform relifePos;
 
     public int HP;
@@ -29,8 +31,9 @@ public class BaseController : MonoBehaviour
         if (HP > 1500) HP = 1500;
     }
 
-    public void Initialize()
+    public void Initialize(GameObject shopUI)
     {
         HP = 1500;
+        shop.shopUI = shopUI;
     }
 }

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Spawn : MonoBehaviour
 {
-    public GameObject player;
     public GameObject shopUI;
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -12,9 +11,7 @@ public class Spawn : MonoBehaviour
         
         if (collision.CompareTag("Player"))
         {
-            
-            player = collision.gameObject;
-            player.transform.GetChild(0).gameObject.SetActive(true);
+            collision.transform.Find("player/interactableItem").gameObject.SetActive(true);
             if (Input.GetKey(KeyCode.E))
             {
                 //全局暂停 
@@ -26,7 +23,7 @@ public class Spawn : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            player.transform.GetChild(0).gameObject.SetActive(false);
+            collision.transform.Find("player/interactableItem").gameObject.SetActive(false);
             
         }
     }

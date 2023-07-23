@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
         createnum = Random.Range(minCreate, maxCreate);
         for (int i = 0; i < createnum; i++)
         {
-            Instantiate(enemyPre, coordinate, Quaternion.identity);
+            Instantiate(enemyPre, coordinate, Quaternion.identity).GetComponent<EnemyAI>().Initialize();
         }
     }
 

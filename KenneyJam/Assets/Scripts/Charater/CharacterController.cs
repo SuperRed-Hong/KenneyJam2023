@@ -23,12 +23,13 @@ public class CharacterController : MonoBehaviour
     public bool down;
     public string MapControllerTag;
     private MapController mapcol;
+    private GameObject homeNow;
 
     private void Start()
     {
         status = GetComponent<PlayerStatus>();
         mapcol = GameObject.FindGameObjectWithTag(MapControllerTag).GetComponent<MapController>();
-        transform.position = mapcol.GenerateMap();
+        transform.position = mapcol.GenerateMap(true);
     }
     public void Update()
     {
@@ -54,4 +55,20 @@ public class CharacterController : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "Home")
+        {
+            if(homeNow == null)
+            {
+                homeNow = collision.gameObject;
+                return;
+            }
+            if (collision.gameObject == homeNow) return;
+            Destroy(homeNow);
+            homeNow = collision.gameObject;
+            mapcol.GenerateMap();
+            Debug.Log("BaseUpdate");
+        }
+    }
 }

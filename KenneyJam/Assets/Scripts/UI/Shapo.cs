@@ -12,11 +12,12 @@ public class Shapo : MonoBehaviour
     public GameObject buyButton;
     public GameObject soldOutImage;
     public GameObject shop;
+
     private void Awake()
     {
-        
         priceString.text = price.ToString();
     }
+
     public void Buy()
     {
         if(status.money > price)

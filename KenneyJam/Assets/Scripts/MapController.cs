@@ -31,6 +31,8 @@ public class MapController : MonoBehaviour
     GameObject turretPrefab;
     [SerializeField]
     GameObject basePrefab;
+    [SerializeField]
+    GameObject Shop;
 
     private MapCellType[,] visibleMap;
     private MapCellType[,] roomMap;
@@ -53,7 +55,7 @@ public class MapController : MonoBehaviour
         originy=-mapHeight/2;
     }
 
-    public Vector2 GenerateMap()
+    public Vector2 GenerateMap(bool first = false)
     {
         roomCenterPos.Clear();
         originx+=mapWidth-2;
@@ -63,8 +65,10 @@ public class MapController : MonoBehaviour
         {
             roomCenterPos[i]+=new Vector2(originx,originy);
         }
+        Vector2 tmp = roomCenterPos[0];
+        if (!first) roomCenterPos.RemoveAt(0);
         GenerateObjects();
-        return roomCenterPos[0];
+        return tmp;
     }
 
     private void CreateMap()
@@ -182,7 +186,7 @@ public class MapController : MonoBehaviour
             }
             else if (roomMap[visibleTilemap.WorldToCell(i).x - originx, visibleTilemap.WorldToCell(i).y - originy] == MapCellType.strongholdRoom)
             {
-                Transform.Instantiate(basePrefab, i, basePrefab.transform.rotation).GetComponent<BaseController>().Initialize();
+                Transform.Instantiate(basePrefab, i, basePrefab.transform.rotation).GetComponent<BaseController>().Initialize(Shop);
             }
         }
     }
