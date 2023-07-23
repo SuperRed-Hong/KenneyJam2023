@@ -7,9 +7,7 @@ static public class MapGenerator
     const int maxTryGenOther=100;
     const int maxGenOther=5;
     const float rateOfMineralRoom=0.8f;
-    const float rateOfMineral1=0.1f;
-    const float rateOfMineral2=0.05f;
-    const float rateOfMineral3=0.01f;
+    const float rateOfMineral=0.5f;
     const int roomMinHeight=4,roomMaxHeight=7,roomMinWidth=4,roomMaxWidth=7;
     const int interval=2;
 
@@ -133,15 +131,9 @@ static public class MapGenerator
                 cnt++;
                 visibleMap[x+i,y+j]=MapCellType.air;
                 roomMap[x+i,y+j]=type;
-                if(type==MapCellType.mineralRoom)
+                if(type==MapCellType.mineralRoom && Random.value<rateOfMineral)
                 {
-                    float randV=Random.value;
-                    if(randV<rateOfMineral1)
-                        visibleMap[x+i,y+j]=MapCellType.mineral1;
-                    else if(randV<rateOfMineral2)
-                        visibleMap[x+i,y+j]=MapCellType.mineral2;
-                    else if(randV<rateOfMineral3)
-                        visibleMap[x+i,y+j]=MapCellType.mineral3;
+                    visibleMap[x+i,y+j]=MapCellType.mineral;
                 }
             }
         }

@@ -262,8 +262,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 54ad1935f562e2e408492d94936abaad, type: 2}
   - {fileID: 11400000, guid: 93608baa6018e0a49a9b65255de0c74b, type: 2}
   - {fileID: 11400000, guid: 4c34d94aee01e8545b70d34e73857cb5, type: 2}
-  gameManager: {fileID: 12683164}
-  turretPrefab: {fileID: 7517525233098790559, guid: 227447361fe3015408d672fa83423b90, type: 3}
 --- !u!4 &110683104
 Transform:
   m_ObjectHideFlags: 0

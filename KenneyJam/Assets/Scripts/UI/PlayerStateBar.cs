@@ -29,7 +29,7 @@ public class PlayerStateBar : MonoBehaviour
     /// </summary>
     public void OnHealthChange()
     {
-        var hpPersentage = player.currentHP / player.maxHP;
+        var hpPersentage = player.currentHP / player.maxHP; 
         var waterPersentage = player.currentWater / player.maxWater;
         healthImage.fillAmount = hpPersentage;
         waterImage.fillAmount = waterPersentage;
@@ -38,7 +38,8 @@ public class PlayerStateBar : MonoBehaviour
         {
             healthDelayImage.fillAmount -= Time.deltaTime * delaySpeed;
         }
-        
+
+
     }
 
 }

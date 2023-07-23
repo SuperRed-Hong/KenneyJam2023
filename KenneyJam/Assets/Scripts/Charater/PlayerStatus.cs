@@ -40,10 +40,9 @@ public class PlayerStatus : MonoBehaviour
         chController = GetComponent<CharacterController>();
         chExcavate = GetComponent<CharacterExcavate>();
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.tag == "Enemy")
+        if (collision.transform.tag == "Enemy")
         {
             currentHP--;
             //print(currentHP);

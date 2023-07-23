@@ -8,7 +8,7 @@ using UnityEditor;
 /// </summary>
 public class CharacterController : MonoBehaviour
 {
-    public Camera Camera;
+    
     private float hor;
     private float ver;
     [Tooltip("玩家移动速度")]
