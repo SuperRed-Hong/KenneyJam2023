@@ -1,18 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
+using UnityEditor;
 /// <summary>
-/// Íæ¼Ò¿ØÖÆÀà
+/// çŽ©å®¶æŽ§åˆ¶ç±»
 /// </summary>
 public class CharacterController : MonoBehaviour
 {
+    public Camera Camera;
     private float hor;
     private float ver;
-    [Tooltip("Íæ¼ÒÒÆ¶¯ËÙ¶È")]
+    [Tooltip("çŽ©å®¶ç§»åŠ¨é€Ÿåº¦")]
     public int _SpeedMove = 2;
+    public Vector3 direction;
 
     public Vector2 inputDirection = new Vector2();
-
+    public PlayerAnimation PlayerAnimation;
+    public bool right;
+    public bool left;
+    public bool up;
+    public bool down;
 
     public void Update()
     {
@@ -24,10 +32,14 @@ public class CharacterController : MonoBehaviour
             inputDirection.y = ver;
             Movement(hor, ver);
         }
+        if (Input.GetMouseButtonDown(0))
+        {
+            
+        }
     }
-
     private void Movement(float hor,float ver)
     {
         transform.Translate(new Vector3(hor, ver, 0) * Time.deltaTime * _SpeedMove);
     }
+    
 }

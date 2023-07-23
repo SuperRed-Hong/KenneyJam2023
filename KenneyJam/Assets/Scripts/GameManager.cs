@@ -2,24 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 /// <summary>
-/// 游戏管理类
+/// 娓告垙绠＄悊绫?
 /// </summary>
 public class GameManager : MonoBehaviour
 {
-    [Tooltip("敌人的预制件")]
+    //[Tooltip("鏁屼汉鐨勯鍒朵欢")]
     public GameObject enemyPre;
-    [Tooltip("生成敌人的最小的随机值")]
+    //[Tooltip("鐢熸垚鏁屼汉鐨勬渶灏忕殑闅忔満鍊?)]
     public int minCreate = 1;
-    [Tooltip("生成敌人的最大的随机值")]
+    //[Tooltip("鐢熸垚鏁屼汉鐨勬渶澶х殑闅忔満鍊?)]
     public int maxCreate = 10;
-    [Tooltip("实际生成敌人的数量")]
+    //[Tooltip("瀹為檯鐢熸垚鏁屼汉鐨勬暟閲?)]
     private int createnum;
     [SerializeField]
     private Transform testTF;
     /// <summary>
-    /// 生成敌人
+    /// 鐢熸垚鏁屼汉
     /// </summary>
-    /// <param name="coordinate">敌人的生成点</param>
+    /// <param name="coordinate">鏁屼汉鐨勭敓鎴愮偣</param>
     public void CreateEnemy(Vector2 coordinate)
     {
         createnum = Random.Range(minCreate, maxCreate);

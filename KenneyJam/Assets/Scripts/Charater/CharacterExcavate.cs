@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 /// <summary>
-/// ��ɫ���ھ��࣬�����ṩ�ھ��ܡ���������Է�����չ
+/// 角色的挖掘类，负责提供挖掘功能。提出来，以方便扩展
 /// </summary>
 public class CharacterExcavate : MonoBehaviour
 {

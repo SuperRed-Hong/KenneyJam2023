@@ -49,6 +49,8 @@ public class MapController : MonoBehaviour
 
         originx=-mapWidth+2;
         originy=-mapHeight/2;
+
+        Invoke("GenerateMap",1f);
     }
 
     public Vector2 GenerateMap()
@@ -102,7 +104,7 @@ public class MapController : MonoBehaviour
 
     private void CreateCell(int x,int y,MapCellType type)
     {
-        if(type==MapCellType.rock  || type==MapCellType.mineral1 || type==MapCellType.mineral2 || type==MapCellType.mineral3)
+        if(type==MapCellType.rock)
             visibleTilemap.SetTile(new Vector3Int(x,y,0),blockParmDic[type].tile[rockTileId]);
         else
             visibleTilemap.SetTile(new Vector3Int(x,y,0),blockParmDic[type].tile[Random.Range(0,blockParmDic[type].tile.Count)]);

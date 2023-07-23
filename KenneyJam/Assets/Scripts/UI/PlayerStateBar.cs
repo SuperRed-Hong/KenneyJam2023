@@ -16,7 +16,7 @@ public class PlayerStateBar : MonoBehaviour
     public TextMeshProUGUI money; 
     private void Awake()
     {
-        
+
     }
     private void Update()
     {
