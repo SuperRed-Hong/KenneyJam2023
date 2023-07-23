@@ -17,13 +17,15 @@ public class CharacterExcavate : MonoBehaviour
     {
         status = GetComponentInParent<PlayerStatus>();
         anim = GetComponentInParent<Animator>();
-        GameObject go = GameObject.FindGameObjectWithTag("MaManager");
+        GameObject go = GameObject.FindGameObjectWithTag("TilemapManager");
         mapcol = go.GetComponent<MapController>();
     }
     private void Excavate(Collision2D col)
     {
         if (mapcol.GetBlockType(col.GetContact(0).point) == MapCellType.rock ||
-            mapcol.GetBlockType(col.GetContact(0).point) == MapCellType.mineral)
+            mapcol.GetBlockType(col.GetContact(0).point) == MapCellType.mineral1||
+            mapcol.GetBlockType(col.GetContact(0).point) == MapCellType.mineral2||
+            mapcol.GetBlockType(col.GetContact(0).point) == MapCellType.mineral3)
         {
 
             if (status.currentWater > 0)
@@ -32,8 +34,14 @@ public class CharacterExcavate : MonoBehaviour
                 mapcol.DestroyCell(col.GetContact(0).point);
                 switch (mapcol.GetBlockType(col.GetContact(0).point))
                 {
-                    case MapCellType.air:
+                    case MapCellType.mineral1:
+                        status.money += 50;
+                        break;
+                    case MapCellType.mineral2:
                         status.money += 100;
+                        break;
+                    case MapCellType.mineral3:
+                        status.money += 500;
                         break;
                 }
                 countnum++;
