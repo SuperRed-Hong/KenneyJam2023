@@ -25,6 +25,10 @@ public class MapController : MonoBehaviour
     TileBase fogTile;
     [SerializeField]
     List<TileBase> mineralRockTile0, mineralRockTile1,mineralRockTile2;
+    [SerializeField]
+    GameManager gameManager;
+    [SerializeField]
+    GameObject turretPrefab;
 
     private MapCellType[,] visibleMap;
     private MapCellType[,] roomMap;
@@ -32,14 +36,12 @@ public class MapController : MonoBehaviour
     private int originx,originy;
     private List<Vector2> roomCenterPos;
     private int rockTileId;
-    List<TileBase>[] mineralRockTile;
 
     void Start()
     {
         blockParmDic=new Dictionary<MapCellType, BlockParm>();
         foreach(var i in blockParm)
             blockParmDic.Add(i.type,i);
-        mineralRockTile=new List<TileBase>[3]{mineralRockTile0,mineralRockTile1,mineralRockTile2};
         roomCenterPos=new List<Vector2>();
 
         visibleMap=new MapCellType[mapWidth+startingRoomWidth,mapHeight];
@@ -59,13 +61,13 @@ public class MapController : MonoBehaviour
         {
             roomCenterPos[i]+=new Vector2(originx,originy);
         }
+        GenerateObjects();
         return roomCenterPos[0];
     }
 
     private void CreateMap()
     {
         rockTileId=Random.Range(0,blockParmDic[MapCellType.rock].tile.Count);
-        blockParmDic[MapCellType.mineral].tile=mineralRockTile[rockTileId];
         for(int x=0;x<mapWidth+startingRoomWidth;x++)
         {
             for(int y=0;y<mapHeight;y++)
@@ -100,7 +102,7 @@ public class MapController : MonoBehaviour
 
     private void CreateCell(int x,int y,MapCellType type)
     {
-        if(type==MapCellType.rock)
+        if(type==MapCellType.rock  || type==MapCellType.mineral1 || type==MapCellType.mineral2 || type==MapCellType.mineral3)
             visibleTilemap.SetTile(new Vector3Int(x,y,0),blockParmDic[type].tile[rockTileId]);
         else
             visibleTilemap.SetTile(new Vector3Int(x,y,0),blockParmDic[type].tile[Random.Range(0,blockParmDic[type].tile.Count)]);
@@ -161,5 +163,20 @@ public class MapController : MonoBehaviour
     {
         Vector2 now=new Vector2(x,y);
         return GetNearRoomDirection(now,minRadius,maxRadius);
+    }
+
+    private void GenerateObjects()
+    {
+        foreach(var i in roomCenterPos)
+        {
+            if(roomMap[visibleTilemap.WorldToCell(i).x-originx,visibleTilemap.WorldToCell(i).y-originy]==MapCellType.monsterRoom)
+            {
+                gameManager.CreateEnemy(i);
+            }
+            else if(roomMap[visibleTilemap.WorldToCell(i).x-originx,visibleTilemap.WorldToCell(i).y-originy]==MapCellType.turretRoom)
+            {
+                Transform.Instantiate(turretPrefab,i,turretPrefab.transform.rotation);
+            }
+        }
     }
 }
