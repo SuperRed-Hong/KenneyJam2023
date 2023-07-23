@@ -25,12 +25,26 @@ public class EnemyStatus : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Weapon" || collision.tag =="")
+        if (collision.tag == "Weapon" )
         {
-            print("打中了");
+            //print("打中了");
             plaStatus = collision.GetComponentInParent<PlayerStatus>();
             currentHP -= plaStatus.ATK;
             print(currentHP);
+            if (currentHP <= 0)
+            {
+                Destroy(gameObject);
+            }
+        }
+        if (collision.tag == "Bullet")
+        {
+            collision.GetComponent<BulletController>().Destory();
+            currentHP -= collision.GetComponent<BulletController>().damage;
+            print(currentHP);
+            if (currentHP <= 0)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }

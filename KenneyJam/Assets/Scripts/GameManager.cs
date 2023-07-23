@@ -31,10 +31,12 @@ public class GameManager : MonoBehaviour
 
     private void OnGUI()
     {
-        if (GUILayout.Button("ç”Ÿæˆæ•Œäºº"))
+        if (GUILayout.Button("Éú³ÉµĞÈË"))
         {
             CreateEnemy(new Vector2(testTF.position.x, testTF.position.z));
         }
+        
     }
-
+   
+    
 }

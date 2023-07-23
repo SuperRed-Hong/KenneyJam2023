@@ -7,7 +7,7 @@ using UnityEngine;
 /// ç©å®¶åªéœ€è¦æŒ‚è¿™ä¸ªç±»ï¼Œä¼šè‡ªåŠ¨æŒ‚è½½å…¶ä»–ç©å®¶æ‰€éœ€ç±»ã€‚
 /// </summary> 
 [RequireComponent(typeof(CharacterController))]//ç»‘å®šè§’è‰²ç§»åŠ¨
-[RequireComponent(typeof(CharacterExcavate))]//ç»‘å®šæŒ–æ˜
+//[RequireComponent(typeof(CharacterExcavate))]//ç»‘å®šæŒ–æ˜
 public class PlayerStatus : MonoBehaviour
 {
     [Tooltip("æ®ç‚¹çš„Transformç»„ä»¶")]
@@ -45,13 +45,16 @@ public class PlayerStatus : MonoBehaviour
         if (collision.tag == "Enemy")
         {
             currentHP--;
-            print(currentHP);
+            //print(currentHP);
             if (currentHP <= 0)
             {
                 Death();
             }
         }
     }
+    /// <summary>
+    /// ËÀÍö·½·¨£¬²¢ÔËĞĞÑÓ³ÙÖØÉú
+    /// </summary>
     private void Death()
     {
         gameObject.SetActive(false);
@@ -63,8 +66,19 @@ public class PlayerStatus : MonoBehaviour
         gameObject.SetActive(true);
         currentHP = maxHP;
     }
+    /// <summary>
+    /// ½«Ë®×ÊÔ´Ö±½ÓÉèÖÃÎªÂú
+    /// </summary>
     public void SetMaxWater()
     {
         currentWater = maxWater;
+    }
+    /// <summary>
+    /// ¸øÍæ¼ÒÔö¼Ó½ğÇ®
+    /// </summary>
+    /// <param name="value">Ôö¼ÓµÄÖµ</param>
+    public void AddMoney(int value)
+    {
+        money += value;
     }
 }
